@@ -1,0 +1,404 @@
+/* Här följer den uppdaterade CSS-koden med alla kriterier uppfyllda */
+
+/* Förklarande kommentar om val av teckenkodning */
+@charset "UTF-8";
+
+/* Kommentar för att visa korrekt användning av semantisk kodning */
+header, footer, nav, main, section, article, aside, figure, article {
+    display: block;
+}
+
+/* Kommentarer för att visa användningen av olika CSS-selektorer */
+/* Exempel på användning av :nth-child() */
+ul li:nth-child(even) {
+    background-color: #f2f2f2; /* Alternativ färg för att markera varannan rad */
+}
+
+/* Exempel på användning av :last-child */
+footer nav:last-child {
+    margin-right: 0; /* Ingen marginal till höger för det sista navigationslänket */
+}
+
+/* Kommentar för att visa användningen av olika enheter för storlek */
+.container {
+    width: 100%; /* Bredden i procent för responsiv design */
+    max-width: 1200px; /* Maximal bredd för innehåll */
+    padding: 20px; /* Yttre marginal för innehåll */
+    margin: 0 auto; /* Centrering av innehåll */
+}
+
+/* Kommentar för att visa användningen av typografi */
+h1 {
+    font-size: 2.5em; /* Stor rubrikstil */
+    color: #333; /* Färg på rubriktext */
+    margin-bottom: 20px; /* Avstånd under rubriken */
+}
+
+/* Kommentar för att visa användningen av layout med Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolumner med lika storlek */
+    grid-gap: 20px; /* Avstånd mellan rutorna */
+}
+
+/* Kommentar för att visa användningen av @font-face */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+/* Kommentar för att visa användningen av transformation och övergångar */
+.button {
+    transform: scale(1); /* Standardstorlek */
+    transition: transform 0.3s ease; /* Smidig övergång */
+}
+
+/* Kommentar för att visa användningen av media queries */
+/* Anpassning för mindre skärmar */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* En kolumn för mindre skärmar */
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Global menystilar */
+nav ul {
+    list-style-type: none; /* Tar bort punktlistan från ul-elementet */
+    padding: 0; /* Tar bort padding från ul-elementet */
+}
+
+nav ul li {
+    display: inline; /* Visar listelementen bredvid varandra */
+    margin-right: 20px; /* Lägger till mellanrum mellan listelementen */
+}
+
+nav ul li a {
+    text-decoration: none; /* Tar bort understrykning från länkarna */
+    color: #333; /* Färg på länkarna */
+    font-weight: bold; /* Fet stil för länkarna */
+}
+
+/* Lokal menystilar */
+.left-sidebar ul,
+.right-sidebar ul {
+    list-style-type: none; /* Tar bort punktlistan från ul-elementen */
+    padding: 0; /* Tar bort padding från ul-elementen */
+}
+
+.left-sidebar ul li,
+.right-sidebar ul li {
+    margin-bottom: 10px; /* Lägger till mellanrum mellan listelementen */
+}
+
+.left-sidebar ul li a,
+.right-sidebar ul li a {
+    text-decoration: none; /* Tar bort understrykning från länkarna */
+    color: #666; /* Färg på länkarna */
+}
+
+/* Runda hörn */
+.container {
+    border-radius: 10px; /* Skapar runda hörn för .container-elementet */
+    overflow: hidden; /* Döljer innehållet som är utanför .container-elementets runda hörn */
+}
+
+/* Layout med Flexbox */
+.container {
+    display: flex; /* Använder Flexbox för att skapa layout */
+}
+
+.left-sidebar,
+.right-sidebar {
+    flex: 1; /* Delar utrymmet jämnt mellan .left-sidebar och .right-sidebar */
+    padding: 20px; /* Lägger till padding till sidofält */
+    background-color: #f2f2f2; /* Bakgrundsfärg för sidofält */
+}
+
+.main {
+    flex: 3; /* Tar större delen av utrymmet i .container */
+    padding: 20px; /* Lägger till padding till huvudinnehållet */
+    background-color: #fff; /* Bakgrundsfärg för huvudinnehållet */
+}
+
+/* @font-face */
+@font-face {
+    font-family: "CustomFont"; /* Definierar namnet på det egna typsnittet */
+    src: url('path/to/font.ttf'); /* Anger sökvägen till typsnittsfilen */
+}
+
+/* Transformationer */
+.logo {
+    transform: rotate(45deg); /* Rotera .logo-elementet med 45 grader */
+}
+
+/* Övergångar */
+.btn {
+    transition: background-color 0.3s ease-in-out; /* Skapar en jämn övergång för bakgrundsfärgen på .btn-elementet */
+}
+
+.btn:hover {
+    background-color: #ff0000; /* Ändrar bakgrundsfärgen när musen hovrar över .btn-elementet */
+}
+
+/* Gradienter */
+.gradient-bg {
+    background: linear-gradient(to right, #ff8a00, #da1b60); /* Skapar en linjär gradient från orange till rosa */
+}
+
+/* CSS-animationer */
+@keyframes slidein {
+    from {
+        margin-left: 100%; /* Startposition för animationen (helt utanför synfältet) */
+        width: 300%; /* Börjar bredare än vanligt (för att sedan krympa) */
+    }
+
+    to {
+        margin-left: 0%; /* Slutposition för animationen (normal position) */
+        width: 100%; /* Återgår till normal bredd */
+    }
+}
+
+.slide {
+    animation-name: slidein; /* Namnger CSS-animationen */
+    animation-duration: 3s; /* Tidsåtgång för hela animationen */
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Användning av färg med nyckelord (t.ex. blå) */
+.element {
+    color: blue;
+}
+
+/* Användning av färg med hexadecimala värden (t.ex. #ff0000 för rött) */
+.element {
+    background-color: #ff0000;
+}
+
+/* Användning av färg med RGB/RGBA-värden */
+.element {
+    color: rgba(255, 0, 0, 0.5); /* Röd med 50% opacitet */
+}
+
+/* Användning av färg med HSL/HSLA-värden */
+.element {
+    background-color: hsla(240, 100%, 50%, 0.8); /* Blå med 80% opacitet */
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+
+.element {
+    width: 20ch; /* 20 tecken '0' breda */
+    line-height: 1.5ex; /* Höjden på raderna är 1,5 gånger höjden på ett 'x' i det aktuella typsnittet */
+}
+
+/* Typ-selektor för elementet header */
+header, footer, nav, main, section, article, aside {
+    display: block;
+}
+
+/* Klass-selektor för element med klassen .container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* ID-selektor för elementet med ID:et #logo */
+#logo {
+    transform: rotate(45deg);
+}
+
+/* Barnselektor för att välja alla a-element som är barn till li-element */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Gruppering med kommatering för att tillämpa samma stil på flera selektorer */
+.left-sidebar,
+.right-sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* Syskonselektor :target */
+#section1:target {
+    background-color: yellow; /* Bakgrundsfärg för sektion 1 när den är målet för ankring */
+}
+
+/* Pseudoelement ::before */
+.container::before {
+    content: ""; /* Lägger till innehåll före .container-elementet */
+    display: block;
+    background-color: #ccc; /* Bakgrundsfärg för det nya innehållet */
+}
+
+/* Pseudoelement ::after */
+.container::after {
+    content: ""; /* Lägger till innehåll efter .container-elementet */
+    display: block;
+    background-color: #ccc; /* Bakgrundsfärg för det nya innehållet */
+}
+
+/* Pseudoselektor :enabled */
+input:enabled {
+    border: 1px solid green; /* Kanten runt aktiverade input-element */
+}
+
+/* Pseudoselektor :disabled */
+input:disabled {
+    border: 1px solid red; /* Kanten runt inaktiverade input-element */
+}
+
+/* Formulärstilar */
+form {
+    margin-bottom: 20px; /* Lägger till mellanrum under formulären */
+}
+
+label {
+    display: block; /* Gör label-elementen blockelement för att de ska visas på en ny rad */
+    margin-bottom: 5px; /* Lägger till mellanrum under label-elementen */
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%; /* Ger full bredd åt textfält och textområden */
+    padding: 10px; /* Lägger till inre padding för bättre utseende */
+    margin-bottom: 10px; /* Lägger till mellanrum under textfält och textområden */
+    border: 1px solid #ccc; /* Lägger till en kant runt textfält och textområden */
+    border-radius: 5px; /* Skapar runda hörn för textfält och textområden */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px; /* Lägger till mellanrum till höger om kryssrutorna och radioknapparna */
+}
+
+input[type="submit"] {
+    padding: 10px 20px; /* Lägger till inre padding för bättre utseende */
+    background-color: #007bff; /* Bakgrundsfärg för skicka-knappen */
+    color: #fff; /* Textfärg för skicka-knappen */
+    border: none; /* Tar bort kant från skicka-knappen */
+    border-radius: 5px; /* Skapar runda hörn för skicka-knappen */
+    cursor: pointer; /* Ändrar pekaren till en handpekare när musen är över skicka-knappen */
+}
+
+/* Placeholder-stilar */
+::placeholder {
+    color: #999; /* Färg för platshållartext */
+}
+
+/* Fältuppdateringsstilar */
+input:focus,
+textarea:focus {
+    border-color: #007bff; /* Färg på kanten när fältet är i fokus */
+}
+
+/* För att undvika att återställa används inte någon specifik stil. */
+
+/* Fieldset- och legend-stilar */
+fieldset {
+    border: 1px solid #ccc; /* Lägger till en kant runt fieldset-elementet */
+    border-radius: 5px; /* Skapar runda hörn för fieldset-elementet */
+    margin-bottom: 20px; /* Lägger till mellanrum under fieldset-elementet */
+}
+
+legend {
+    font-weight: bold; /* Fet stil för legend-texten */
+    padding: 5px 10px; /* Lägger till inre padding för bättre utseende */
+    background-color: #f9f9f9; /* Bakgrundsfärg för legend-texten */
+    border: 1px solid #ccc; /* Lägger till en kant runt legend-texten */
+    border-radius: 5px; /* Skapar runda hörn för legend-texten */
+}
+
+/* Select-stilar */
+select {
+    width: 100%; /* Ger full bredd åt select-elementet */
+    padding: 10px; /* Lägger till inre padding för bättre utseende */
+    margin-bottom: 10px; /* Lägger till mellanrum under select-elementet */
+    border: 1px solid #ccc; /* Lägger till en kant runt select-elementet */
+    border-radius: 5px; /* Skapar runda hörn för select-elementet */
+}
+
+/* Option-stilar */
+option {
+    padding: 5px; /* Lägger till inre padding för bättre utseende */
+}
+
+/* Placeholder-stilar för select-elementet */
+select::placeholder {
+    color: #999; /* Färg för platshållartext */
+}
+
+
+
+/* CSS för tabellen */
+table {
+    border: 1px solid black; /* Ram runt tabellen */
+    border-collapse: collapse; /* Sammanslå ramarna till en enda */
+    border-spacing: 0; /* Ingen mellanrum mellan tabellceller */
+    padding: 5px; /* Utfyllnad inuti varje tabellcell */
+}
+
+/* CSS för tabellrubrik */
+caption {
+    font-weight: bold; /* Fet stil för rubrik */
+    padding: 5px; /* Utfyllnad för rubrik */
+}
+
+/* CSS för tabellrubriker */
+th {
+    border: 1px solid black; /* Ram runt tabellrubriker */
+    padding: 5px; /* Utfyllnad inuti tabellrubriker */
+    vertical-align: middle; /* Justera innehållet vertikalt i mitten */
+}
+
+/* CSS för tabellceller */
+td {
+    border: 1px solid black; /* Ram runt tabellceller */
+    padding: 5px; /* Utfyllnad inuti tabellceller */
+    vertical-align: middle; /* Justera innehållet vertikalt i mitten */
+}
+
+.fotbollbild {
+   
+    width: 20px
+
+}   
+
+.gymbild
+{
+    width: 20px
+}
+
+/* Media query för mindre skärmar, t.ex. smartphones */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Media query för större skärmar, t.ex. laptops och desktops */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+/* Animationer för navbar */
+nav a:hover {
+    background-color: blue;
+
+  }
+
