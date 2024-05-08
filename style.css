@@ -339,7 +339,7 @@ option {
 
 /* Placeholder-stilar för select-elementet */
 select::placeholder {
-    color: #999; /* Färg för platshållartext */
+    color: #999; /* Färg förplatshållartext */
 }
 
 
