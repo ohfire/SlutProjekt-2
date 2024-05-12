@@ -1,7 +1,63 @@
-/* Här följer den uppdaterade CSS-koden med alla kriterier uppfyllda */
+/* CSS-reset för att neutralisera standardstilarna från olika webbläsare */
 
-/* Förklarande kommentar om val av teckenkodning */
-@charset "UTF-8";
+/* Ange box-sizing för alla element till border-box för att inkludera padding och border i elementets totala bredd och höjd */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Ta bort standardmarginaler och fyllningar från alla element */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ange grundläggande standarder för body, såsom typsnittsfamilj och bakgrundsfärg */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: Arial, sans-serif; /* Använd Arial eller sans-serif som typsnitt */
+    background: #fff; /* Vit bakgrund för tydlighet */
+}
+
+/* Gör bilder enklare att hantera, inga onödiga ramar eller utstickande */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Arv typsnitt och grundinställningar för formulärelement */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Ta bort liststilar för listor med en klass för att förhindra oönskad punktformatering */
+ul[class], ol[class] {
+    list-style: none;
+}
+
+/* Normalisera länkar för att undvika standardunderstrykning och färg */
+a {
+    text-decoration: none;
+    color: inherit; /* Arv färg från förälderelement */
+}
+
+/* Normalisera formulär genom att ta bort kantlinjer och justera textfältens utseende */
+input, button, textarea, select {
+    border: 1px solid #ccc; /* Enhetlig grå kant */
+    padding: 0.4em;
+    margin: 0;
+}
+
+
+
+
+/*-------------CSS RESET -------------------------------*/
+
+
+
+/* Här följer den uppdaterade CSS-koden med alla kriterier uppfyllda */
 
 /* Kommentar för att visa korrekt användning av semantisk kodning */
 header, footer, nav, main, section, article, aside, figure, article {
@@ -402,12 +458,6 @@ nav a:hover {
 
   }
 
-/* Grundläggande reset för enhetligt utseende */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Förklarande kommentar om semantiska element */
 header, footer, nav, main, section, article, aside {
