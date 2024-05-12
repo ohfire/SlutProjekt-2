@@ -59,10 +59,7 @@ input, button, textarea, select {
 
 /* Här följer den uppdaterade CSS-koden med alla kriterier uppfyllda */
 
-/* Kommentar för att visa korrekt användning av semantisk kodning */
-header, footer, nav, main, section, article, aside, figure, article {
-    display: block;
-}
+
 
 /* Kommentarer för att visa användningen av olika CSS-selektorer */
 /* Exempel på användning av :nth-child() */
@@ -255,10 +252,6 @@ nav ul li a {
     line-height: 1.5ex; /* Höjden på raderna är 1,5 gånger höjden på ett 'x' i det aktuella typsnittet */
 }
 
-/* Typ-selektor för elementet header */
-header, footer, nav, main, section, article, aside {
-    display: block;
-}
 
 /* Klass-selektor för element med klassen .container */
 .container {
@@ -457,12 +450,6 @@ nav a:hover {
     background-color: blue;
 
   }
-
-
-/* Förklarande kommentar om semantiska element */
-header, footer, nav, main, section, article, aside {
-    display: block;
-}
 
 /* Grundläggande typografi och layout */
 body {
