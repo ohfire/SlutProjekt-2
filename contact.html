@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idrottswebbplats</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <div class="container">
@@ -35,6 +33,20 @@
                 
                     <label for="email">E-post:</label>
                     <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+
+                    <label for="password">Lösenord:</label>
+                    <input type="password" id="password" name="password" placeholder="Ditt lösenord" required>
+                
+                    <label for="newsletter">Prenumerera på vårt nyhetsbrev:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+
+                    <fieldset>
+                        <legend>Välj ditt kön:</legend>
+                        <label for="male">Man</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="female">Kvinna</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                    </fieldset>
                 
                     <label for="message">Meddelande:</label>
                     <textarea id="message" name="message" placeholder="Ditt meddelande" required></textarea>
@@ -47,7 +59,6 @@
                     <p>Vi har mottagit ditt meddelande och återkommer så snart som möjligt.</p>
                     <p><a href="index.html">Tillbaka till startsidan</a></p>
                 </div>
-                
             </div>
         </section>
     </main>
@@ -57,6 +68,6 @@
             <p>&copy; 2024 Idrottswebbplats. Alla rättigheter förbehållna.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>

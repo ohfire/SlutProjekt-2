@@ -36,30 +36,36 @@
             <p>Här är det huvudsakliga innehållet på webbplatsen.</p>
 
             <section id="home" class="section">
-                <div class="container">
+                <div>
                     <h2>Hem</h2>
                     <p>Välkommen till vår idrottswebbplats. Här hittar du information om olika idrotter, träningsråd, kommande evenemang och hur du kan kontakta oss.</p>
                 </div>
             </section>
 
             <section id="about" class="section">
-                <div class="container">
+                <div>
                     <h2>Om oss</h2>
                     <p>Vi är dedikerade till främjandet av idrott och motion för människor i alla åldrar och förmågor.</p>
                 </div>
             </section>
 
             <section id="sports" class="section">
-                <div class="container">
+                <div>
                     <h2>Idrotter</h2>
                     <ul>
-                        <li><a href="fotball.html">Fotboll</a></li>
-                        <li>
-                            <img src="fotbollbild.svg" alt="fotboll" class="fotbollbild" lang="sv">
+                        <li><a href="fotball.html">Fotboll</a>
+                            <ul>
+                                <li>
+                                    <img src="fotbollbild.svg" alt="fotboll" class="fotbollbild">
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="styrketräning.html">Styrketräning</a></li>
-                        <li>
-                            <img src="gym.svg" alt="gym" class="gymbild">
+                        <li><a href="styrketräning.html">Styrketräning</a>
+                            <ul>
+                                <li>
+                                    <img src="gym.svg" alt="gym" class="gymbild">
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -78,7 +84,7 @@
         </div>
     </footer>
     <button id="topBtn" class="top-button" onclick="scrollToTop()">⬆ Till toppen</button>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
